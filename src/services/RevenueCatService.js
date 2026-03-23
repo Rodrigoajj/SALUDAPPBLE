@@ -1,9 +1,9 @@
 import { Platform } from 'react-native';
 
-// API Keys Provided by User
+// API Keys Provided from Environment Variables
 const API_KEYS = {
-    apple: 'test_EAuAHzjlITZAhMUejMpUvAwoSPl', // Using the Test API Key provided
-    google: 'test_EAuAHzjlITZAhMUejMpUvAwoSPl'  // Assuming same key for both or placeholder
+    apple: process.env.EXPO_PUBLIC_RC_APPLE_KEY || '',
+    google: process.env.EXPO_PUBLIC_RC_GOOGLE_KEY || ''
 };
 
 const ENTITLEMENT_ID = 'Saludappble Pro'; // User specified entitlement

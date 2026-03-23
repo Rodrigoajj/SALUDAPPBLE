@@ -19,3 +19,7 @@ stress_test_report.txt
 temp_*.js
 test_*.js
 test_*.mjs
+
+# Environment Variables
+.env
+.env.*
