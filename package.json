@@ -1,0 +1,46 @@
+{
+  "name": "healthscan",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "ts:check": "tsc"
+  },
+  "dependencies": {
+    "@expo/metro-runtime": "^6.1.2",
+    "@expo/vector-icons": "^14.0.0",
+    "@react-native-async-storage/async-storage": "1.21.0",
+    "@react-native/babel-preset": "^0.83.1",
+    "@react-navigation/bottom-tabs": "^7.12.0",
+    "@react-navigation/native": "^7.1.28",
+    "@react-navigation/native-stack": "^7.12.0",
+    "axios": "^1.6.5",
+    "expo": "^54.0.33",
+    "expo-build-properties": "~1.0.10",
+    "expo-camera": "^17.0.10",
+    "expo-status-bar": "~1.11.1",
+    "nativewind": "^4.2.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-native": "^0.81.5",
+    "react-native-paper": "^5.12.1",
+    "react-native-purchases": "^9.7.6",
+    "react-native-purchases-ui": "^9.7.6",
+    "react-native-reanimated": "^4.2.1",
+    "react-native-safe-area-context": "^5.6.2",
+    "react-native-screens": "^4.23.0",
+    "react-native-web": "^0.21.2",
+    "react-native-worklets": "^0.7.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@types/react": "~18.2.45",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "typescript": "^5.3.0"
+  },
+  "private": true
+}

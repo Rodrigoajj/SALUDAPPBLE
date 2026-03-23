@@ -1,0 +1,21 @@
+node_modules/
+.expo/
+dist/
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+
+# Android/iOS builds
+android/
+ios/
+
+# Custom logs and test outputs
+output*.log
+test_output.txt
+stress_test_report.txt
+temp_*.js
+test_*.js
+test_*.mjs
