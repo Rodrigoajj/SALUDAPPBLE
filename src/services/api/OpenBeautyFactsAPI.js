@@ -6,7 +6,7 @@ class OpenBeautyFactsAPI {
   async getProductByBarcode(barcode) {
     try {
       const response = await axios.get(`${BASE_URL}/product/${barcode}.json`);
-      
+
       if (response.data.status === 1) {
         const product = response.data.product;
         return {
@@ -15,8 +15,17 @@ class OpenBeautyFactsAPI {
           brand: product.brands,
           category: 'higiene',
           details: {
-            ingredients: product.ingredients_text_es ? 
-              product.ingredients_text_es.split(',') : [],
+            ingredients: (
+              product.ingredients_text_es ||
+              product.ingredients_text ||
+              product.ingredients_text_en ||
+              product.ingredients_text_with_allergens ||
+              product.ingredients_text_debug ||
+              ''
+            )
+              .split(/[,;\n]/) // Split by comma, semicolon or newline
+              .map(i => i.trim())
+              .filter(i => i !== '' && i.length > 2), // Filter out short strings/empty
             activeIngredients: this.parseActiveIngredients(product)
           }
         };
